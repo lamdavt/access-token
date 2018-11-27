@@ -1,0 +1,16 @@
+<h2 style="text-align: center">Thống kê báo cáo</h2>
+<div class="xuli">
+  <form class="form">
+  <div class="ngayvao">
+    <label>Nhập ngày: </label><br>
+    <input type="date" name="date1" [(ngModel)]="data1">
+  </div>
+  <div class="ngayra">
+    <label>Tới ngày: </label><br>
+    <input type="date"  [(ngModel)]="data2" name="data2">
+  </div>
+  <button class="btn btn-primary" style="margin-top: 20px;" (click)="click(data1,data2)">Tra Cứu</button>
+  <p>Tổng tiền bán được là:<b> {{tongtien.totalPrice}}</b></p>
+
+</form>
+</div>

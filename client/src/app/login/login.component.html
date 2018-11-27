@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+    
+            <div class="wrap">
+                <p class="form-title" style="margin-top: 150px; ">
+                    Sign In</p>
+                <form class="login">
+                <input  type="text" placeholder="Email" [(ngModel)]="email" name="email" />
+                <input  type="password" placeholder="Password" [(ngModel)]="password"  name="password"/>
+                <input  type="submit" value="Sign In" (click)="checkLogin()" class="btn btn-success btn-sm" style="background: purple" />
+                <div class="remember-forgot">
+                    <div class="row">
+                        <div class="col-md-6">
+                            
+                        </div>
+                        <div class="col-md-6 forgot-pass-content">
+                            <!-- <a href="javascription:void(0)" class="forgot-pass">Forgot Password</a> -->
+                        </div>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+      $('.forgot-pass').click(function(event) {
+        $(".pr-wrap").toggleClass("show-pass-reset");
+      }); 
+      
+      $('.pass-reset-submit').click(function(event) {
+        $(".pr-wrap").removeClass("show-pass-reset");
+      }); 
+  });
+    </script>
+    

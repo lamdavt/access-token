@@ -1,0 +1,63 @@
+<div class="banhang">
+  <h3>Nhập Hàng</h3>
+  <form style="width: 50%; margin: 0 auto;">
+      <div class="nhaphanohoi">
+        <label>Nhập nhà phân phối:</label>
+     
+        <select class="form-control" id="sel1" [(ngModel)]="nhaphang.idcompany" [ngModelOptions]="{standalone: true}"> <!---->
+          <option *ngFor="let item of nhapp" [ngValue]="item.id">{{item.name}}</option>
+        </select>
+      </div>
+      <div class="nhapten">
+          <label>Nhập tên đơn hàng:</label><br>
+        <input id="haha" type="text" placeholder="nhập tên đơn hàng" [(ngModel)]="nhaphang.titel" name="titel">
+      </div>
+      <div class="Nhapsanpham">
+          <label for="sel1">Nhập sản phẩm:</label>
+          <input style="position: relative" id="haha" type="text" class="form-control" [formControl]="name">
+      </div>
+      <table>
+        <tr>
+          <th>Tên Sản Phẩn</th>
+        </tr>
+      </table>
+      <div class="hehe">
+        <table>
+          <tr>
+            <td *ngFor="let i of product" (click)="click(i.id)">{{i.name}}</td>
+          </tr>  
+        </table>
+      </div>
+  </form>
+  <br>
+  <br>
+  <div class="nhaphang">
+        <table>
+            <tr>
+              <th class="masanpham">Tên mặt hàng</th>
+              <!-- <th class="masanpham">Loại sản phẩm</th> -->
+              <th class="masanpham">Giá nhập</th>
+              <th class="masanpham">Giá Bán</th>
+              <th class="masanpham">Số lượng</th>
+              <th class="masanpham">Thành tiền</th>
+              <th class="masanpham">Xóa</th>
+            </tr>
+            <tr *ngFor="let item of products; let i = index">
+              <td>{{item.name}}</td>
+              <!-- <td>{{item.nameCatalog}}</td>  -->
+              <td id="input">{{item.inputPrice}}</td> 
+              <td>{{item.sellPrice}}</td>
+              
+             <td><input type="number" placeholder="soluong" id="item.id" [(ngModel)]="item.quantitys" min=1 [formControl]="quantt"></td>
+              <td>{{item.inputPrice*item.quantitys}}</td>
+              <td><button (click)="deleteNPP2(item.id,i)">Xóa</button></td>
+            </tr>     
+          </table>
+      </div>
+      <br>
+      <span style="padding-left: 350px;"><b>Tổng tiền: {{total}}</b></span>
+
+      <br>
+      <button style="margin-left: 0px;">Quay lại</button>
+      <button style="margin-left:500px;" (click)="createNhapHang()">In hóa đơn</button>
+</div>

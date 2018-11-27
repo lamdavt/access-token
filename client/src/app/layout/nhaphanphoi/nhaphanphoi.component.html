@@ -1,0 +1,23 @@
+<table *ngIf="!check">
+    <tr>
+      <th class="hehe">Mã số</th>
+      <th>Tên NPP</th>
+      <th>Mô tả</th>
+      <th>Địa Chỉ</th>
+      <th>Phone</th>
+      <th>Sửa/Xóa</th>
+    </tr>
+    <tr *ngFor = "let cty of icompany; let i = index">
+      <td>{{cty.id}}</td>
+      <td>{{cty.name}}</td>
+      <td>{{cty.logo}}</td>
+      <td>{{cty.address}}</td>
+      <td>{{cty.phone}}</td>
+      <td><button (click)="checkButton()" [routerLink]="['suanhaphanphoi/' + cty.id]">Sửa</button> || <button (click)="deleteNPP2(cty.id,i)" (click)="deleteNPP(cty.id)">Xóa</button></td>
+    </tr>
+  </table><br>
+  <Div *ngIf="check">
+    <router-outlet></router-outlet>
+  </Div>
+
+  

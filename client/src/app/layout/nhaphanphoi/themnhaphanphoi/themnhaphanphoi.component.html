@@ -1,0 +1,24 @@
+<div class="themnhaphanphoi">
+ <form id="myForm">
+      <div class="form-group">
+        <label for="pwd">Tên NPP:</label>
+        <input id="myInput" [(ngModel)]="company.name" type="text" class="form-control"  placeholder="Enter tên NPP" name="name" value="">
+      </div>
+      <div class="form-group">
+        <label for="pwd">Mô tả:</label>
+        <input id="myInput" [(ngModel)]="company.logo" type="text" class="form-control"  placeholder="Enter mô tả" name="logo0">
+      </div>
+      <div class="form-group">
+          <label for="pwd">Địa chỉ:</label>
+          <input id="myInput" [(ngModel)]="company.address" type="text" class="form-control"  placeholder="Enter Địa Chỉ" name="address">
+        </div>
+        <div class="form-group">
+            <label for="pwd">Số ĐT:</label>
+            <input id="myInput" [(ngModel)]="company.phone" type="text" class="form-control"  placeholder="Enter SĐT" name="phone">
+          </div>
+        </form>
+      <button type="submit" class="btn btn-primary" (click)="creatNhaPP()">Lưu</button>
+      <button type="submit" class="btn btn-primary" onclick="document.getElementById('myForm').reset()">Reset </button>
+      <button type="submit" class="btn btn-primary">Thoát </button>
+</div>
+ 

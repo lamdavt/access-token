@@ -1,0 +1,25 @@
+<div   *ngIf="!check" class="nhaphang">
+    <h2 style="text-align: center">Sản Phẩm</h2>
+    <table>
+        <tr>
+          <th class="masanpham">Mã sản phẩm</th>
+          <th class="masanpham">Tên sản phẩm</th>
+          <th class="masanpham">Giá Bán</th>
+          <th class="masanpham">Giá Nhập</th>
+          <th class="masanpham">Loại Sản Phẩm</th>
+          <th class="masanpham">Sửa/Xóa</th>
+        </tr>
+        <tr *ngFor="let catalog of sanpham; let i=index">
+          <td>{{catalog.id}}</td>
+          <td>{{catalog.name}}</td>
+          <td>{{catalog.sellPrice}}</td>
+          <td>{{catalog.inputPrice}}</td>
+          <td >{{catalog.nameCatalog}}</td>
+          <td><Button [routerLink]="['suasanpham/' +catalog.id]" (click)="checkButton()">Sửa</Button>||<button (click)="deleteNPP2(catalog.id, i)" >Xóa</button></td>
+        </tr>
+      </table>
+  </div>
+ <Div *ngIf="check">
+      <router-outlet></router-outlet>
+    </Div> 
+  

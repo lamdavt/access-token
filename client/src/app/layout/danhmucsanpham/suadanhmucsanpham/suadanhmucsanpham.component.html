@@ -1,0 +1,13 @@
+<div  style="width: 70%; margin: 0 auto;" class="themnhaphanphoi">
+  <h3>Sửa Danh Mục Sản Phẩm</h3>
+    <form id="myForm">
+<div class="form-group">
+  <label for="pwd">Tên Loại Sản Phẩm:</label>
+  <input type="text" class="form-control"  placeholder="Enter loại sản phẩm" [(ngModel)]="danhmuc.name" name="name" >
+</div>
+</form>
+<button type="submit" class="btn btn-primary" (click)="updateDanhMuc()">Lưu</button>
+<button type="submit" class="btn btn-primary" onclick="document.getElementById('myForm').reset()">Reset </button>
+<button type="submit" class="btn btn-primary">Thoát </button>
+
+</div>

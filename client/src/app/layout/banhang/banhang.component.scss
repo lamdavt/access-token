@@ -1,0 +1,30 @@
+.banhang{
+    margin: 0 auto;
+    text-align: center;
+    width: 80%;
+    h3{
+        text-align: center;
+    }
+    .mausac{
+        background: rgb(83, 163, 163);
+        color: white;
+    }
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+    
+    td, th {
+        border: 1px solid white;
+        text-align: left;
+        padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+        background-color: white;
+    }
+    .masanpham{
+        width: 10%;
+    }
+}

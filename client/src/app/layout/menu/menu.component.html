@@ -1,0 +1,168 @@
+<!-- sidebar-collapse -->
+<nav *ngIf="user" class="navbar-default navbar-static-side" role="navigation">
+  <div class="sidebar-collapse">
+    <!-- side-menu -->
+    <ul class="nav" id="side-menu" style="background:rgb(83, 163, 163);">
+      <li>
+        <!-- user image section-->
+        <div class="user-section " style="background: rgb(83, 163, 163);
+              ">
+          <div class="user-section-inner">
+            <img src="./assets/template/img/user.jpg" alt="">
+          </div>
+          <div class="user-info" style="color: white">
+            <div style="color: white">
+              <strong style="color: white">{{user.name}}</strong>
+            </div>
+            <div class="user-text-online">
+              <span class="user-circle-online btn btn-success btn-circle "></span>&nbsp;Online
+            </div>
+          </div>
+        </div>
+        <!--end user image section-->
+      </li>
+      <!-- <li class="sidebar-search"> -->
+      <!-- search section-->
+      <!-- <div class="input-group custom-search-form">
+                  <input type="text" class="form-control" placeholder="Search...">
+                  <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">
+                          <i class="fa fa-search"></i>
+                      </button>
+                  </span>
+              </div> -->
+      <!--end search section-->
+      <!-- </li> -->
+      <li class="selected" style="background: rgba(74, 72, 126, 0)">
+        <a [routerLink]="['banhang']">
+          <i class="fa fa-bar-chart-o fa-fw"></i> Quản Lí Bán Hàng
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['nhaphang']">
+          <i class="fa fa-bar-chart-o fa-fw"></i> Quản Lí Nhập Hàng
+        </a>
+        <!-- <ul class="nav nav-second-level">
+                  <li>
+                      <a href="#">Hello</a>
+                  </li>
+                 
+              </ul> -->
+        <!-- second-level-items -->
+      </li>
+      <li>
+        <a [routerLink]="['hangtonkho']">
+          <i class="fa fa-flask fa-fw"></i>Hàng Tồn Kho</a>
+      </li>
+      <li>
+        <a href="" [routerLink]="['thongkechitieu']">
+          <i class="fa fa-table fa-fw"></i>Thống Kê Lợi Nhuận</a>
+      </li>
+      <li>
+        <a href="" [routerLink]="['hoadonnhaphang']">
+          <i class="fa fa-edit fa-fw"></i>Hóa Đơn Nhập Hàng</a>
+      </li>
+      <li>
+        <a href="" [routerLink]="['hoadonbanhang']">
+          <i class="fa fa-edit fa-fw"></i>Hóa Đơn Bán Hàng</a>
+      </li>
+      <li>
+        <a href="" [routerLink]="['doanhmucsanpham']">
+          <i class="fa fa-edit fa-fw"></i>Danh Mục Sản Phẩm
+          <span class="fa arrow"></span>
+        </a>
+        <ul class="nav nav-second-level">
+          <li>
+            <a href="#" [routerLink]="['themdanhmucsanpham']">Thêm Danh Mục Sản Phẩm</a>
+          </li>
+
+        </ul>
+      </li>
+      <li>
+            <a href="" [routerLink]="['sanpham']">
+              <i class="fa fa-edit fa-fw"></i>Sản Phẩm
+              <span class="fa arrow"></span>
+            </a>
+            <ul class="nav nav-second-level">
+              <li>
+                <a href="#" [routerLink]="['themsanpham']">Thêm Sản Phẩm</a>
+              </li>
+    
+            </ul>
+          </li>
+      <li>
+        <a href="#" [routerLink]="['nhaphanphoi']">
+          <i class="fa fa-wrench fa-fw"></i> Nhà Phân Phối
+          <span class="fa arrow"></span>
+        </a>
+        <ul class="nav nav-second-level">
+          <li>
+            <a href="" [routerLink]="['themnhaphanphoi']">Thêm NPP</a>
+          </li>
+          <!-- <li>
+                      <a href="notifications.html">Notifications</a>
+                  </li>
+                  <li>
+                      <a href="typography.html">Typography</a>
+                  </li>
+                  <li>
+                      <a href="grid.html">Grid</a>
+                  </li> -->
+        </ul>
+        <!-- second-level-items -->
+      </li>
+      <!-- <li> -->
+      <!-- <a href="#">
+                  <i class="fa fa-sitemap fa-fw"></i>Multi-Level Dropdown
+                  <span class="fa arrow"></span>
+              </a>
+              <ul class="nav nav-second-level">
+                  <li>
+                      <a href="#">Second Level Item</a>
+                  </li>
+                  <li>
+                      <a href="#">Second Level Item</a>
+                  </li>
+                  <li>
+                      <a href="#">Third Level
+                          <span class="fa arrow"></span>
+                      </a>
+                      <ul class="nav nav-third-level">
+                          <li>
+                              <a href="#">Third Level Item</a>
+                          </li>
+                          <li>
+                              <a href="#">Third Level Item</a>
+                          </li>
+                          <li>
+                              <a href="#">Third Level Item</a>
+                          </li>
+                          <li>
+                              <a href="#">Third Level Item</a>
+                          </li>
+                      </ul> -->
+      <!-- third-level-items -->
+      <!-- </li>
+              </ul> -->
+      <!-- second-level-items -->
+      <!-- </li>
+          <li> -->
+      <!-- <a href="#">
+                  <i class="fa fa-files-o fa-fw"></i>Sample Pages
+                  <span class="fa arrow"></span>
+              </a>
+              <ul class="nav nav-second-level">
+                  <li>
+                      <a href="blank.html">Blank Page</a>
+                  </li>
+                  <li>
+                      <a href="login.html">Login Page</a>
+                  </li>
+              </ul> -->
+      <!-- second-level-items -->
+      <!-- </li> -->
+    </ul>
+    <!-- end side-menu -->
+  </div>
+</nav>
+<!-- end sidebar-collapse -->

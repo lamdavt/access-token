@@ -1,0 +1,18 @@
+<div  *ngIf="!check" class="nhaphang">
+  <h2 style="text-align: center">Danh Mục Sản Phẩm</h2>
+  <table>
+      <tr>
+        <th class="masanpham">Mã danh mục</th>
+        <th class="masanpham">Loại Sản Phẩm</th>
+        <th class="masanpham">Sửa/Xóa</th>
+      </tr>
+      <tr *ngFor="let catalog of catalogs; let i=index">
+        <td>{{catalog.id}}</td>
+        <td>{{catalog.name}}</td>
+        <td><Button [routerLink]="['suadanhmuc/' + catalog.id]" (click)="checkButton()">Sửa</Button>||<button  (click)="deleteNPP2(catalog.id,i)">Xóa</button></td>
+      </tr>
+    </table>
+</div>
+<Div *ngIf="check">
+    <router-outlet></router-outlet>
+  </Div>
